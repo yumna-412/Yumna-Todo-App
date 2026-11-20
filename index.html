@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <p class="subtitle">MY PERSONAL PRODUCTIVITY SPACE</p>
+            <h1>My Task Manager</h1>
+            <p class="description">
+                Organise your day, one task at a time.
+            </p>
+        </header>
+
+        <section class="task-summary">
+            <div class="summary-card">
+                <h2 id="total">0</h2>
+                <p>Total Tasks</p>
+            </div>
+
+            <div class="summary-card">
+                <h2 id="count">0</h2>
+                <p>Tasks Remaining</p>
+            </div>
+        </section>
+
+        <section class="todo-section">
+
+            <form id="form">
+                <input
+                    type="text"
+                    id="text"
+                    placeholder="What do you need to do?"
+                    autocomplete="off"
+                >
+
+                <button type="submit" class="add-btn">
+                    + Add Task
+                </button>
+            </form>
+
+            <div class="filter-buttons">
+                <button type="button" class="filter active" data-filter="all">
+                    All
+                </button>
+
+                <button type="button" class="filter" data-filter="active">
+                    Active
+                </button>
+
+                <button type="button" class="filter" data-filter="done">
+                    Done
+                </button>
+            </div>
+
+            <ul id="list"></ul>
+
+            <div class="empty-message" id="empty">
+                <p>No tasks here yet!</p>
+                <span>Add a task to get started.</span>
+            </div>
+
+            <div class="bottom-section">
+                <p id="progress">0 tasks remaining</p>
+
+                <button type="button" id="clear-completed">
+                    Clear Completed
+                </button>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Stay focused. Keep moving forward.</p>
+            <span>Made with HTML, CSS & JavaScript</span>
+        </footer>
+
+    </div>
+
+</body>
+</html>
